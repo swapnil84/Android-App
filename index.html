@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Online App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/responsive-font-size.scss" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+
+	<div id="page">
+		<header>
+			<nav id="search">
+				<a href="#" class="back"></a>
+				<ul>
+					<li class="search"><a href="#"></a><input type="text"/></li>
+					<li class="camera"><a href="#" onclick="capturePhoto();"></a></li>
+					<li class="mike"><a href="#"></a></li>
+				</ul>
+				<a href="#" class="menu"></a>
+			</nav>
+			<nav id="nav">
+				<ul>
+					<li class="active"><a href="#" data-slide="true" data-panel="home" class="home"></a></li>
+					<li><a href="#" data-slide="true" data-panel="watchlist" class="watchlist"></a></li>
+					<li><a href="#" class="ideabank"></a></li>
+					<li><a href="#" class="trade"></a></li>
+					<li><a href="#" class="chat"></a></li>
+					<li><a href="#" class="alert"></a></li>
+				</ul>
+			</nav>
+			
+		</header><!-- /header -->
+		<div class="content-wrapper">
+			<section id="home" class="active"> 
+				<div>
+					<ul class="company">
+						<li class="pfizer rate_increase">
+							<span class="logo"><img src="images/pfizer_logo.png" /></span>
+							<span class="rate">4.958</span>
+							<div class="deviation">
+								<div>
+									<span>H 4.530</span>
+									<span>L 3.754</span>
+								</div>
+								<div>
+									<span>+ 0.856</span>
+									<span>(1.35%)</span>
+								</div>
+							</div>
+							<a href="#" class="pin_off"></a>
+						</li>
+						<li class="ge rate_decrease">
+							<span class="logo"><img src="images/ge_logo.png" /></span>
+							<span class="rate">714.40</span>
+							<div class="deviation">
+								<div>
+									<span>H 723.20</span>
+									<span>L 707.90</span>
+								</div>
+								<div>
+									<span>- 7.40</span>
+									<span>(1.03%)</span>
+								</div>
+							</div>
+							<a href="#" class="pin_on"></a>
+						</li>
+						<li class="abb rate_increase">
+							<span class="logo"><img src="images/abb_logo.png" /></span>
+							<span class="rate">98.75</span>
+							<span class="rate_increase"></span>
+							<div class="deviation">
+								<div>
+									<span>H 98.80</span>
+									<span>L 97.80</span>
+								</div>
+								<div>
+									<span>+ 0.75</span>
+									<span>(0.77%)</span>
+								</div>
+							</div>
+							<a href="#" class="pin_off"></a>
+						</li>
+						<li class="ca rate_increase">
+							<span class="logo"><img src="images/ca_logo.png" /></span>
+							<span class="rate">491.25</span>
+							<span class="rate_increase"></span>
+							<div class="deviation">
+								<div>
+									<span>H 491.25</span>
+									<span>L 476.25</span>
+								</div>
+								<div>
+									<span>+ 11.00</span>
+									<span>(2.29%)</span>
+								</div>
+							</div>
+							<a href="#" class="pin_off"></a>
+						</li>
+					</ul>
+				</div>
+			</section><!-- /content -->
+
+			<section id="watchlist"> 
+				<div>
+					<ul class="company">
+						<li class="ge rate_decrease">
+							<span class="logo"><img src="images/ge_logo.png" /></span>
+							<span class="rate">714.40</span>
+							<div class="deviation">
+								<div>
+									<span>H 723.20</span>
+									<span>L 707.90</span>
+								</div>
+								<div>
+									<span>- 7.40</span>
+									<span>(1.03%)</span>
+								</div>
+							</div>
+						</li>
+						<li class="add">
+							Add New Company
+							<a href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="searchResult"> 
+				<div data-role="content">
+					<div class="recentSearch">
+						<h2>Recent Search</h2>
+						<ul>
+							<li>Starbucks</li>
+							<li>Pfizer</li>
+						</ul>						
+					</div>
+					
+					<div class="trending">
+						<h2>Trending</h2>
+						<ul>
+							<li>General Electric</li>
+							<li>CISCO</li>
+							<li>NBC Capital</li>
+							<li>Franklin Street</li>
+							<li>Vernetx Holding Corp.</li>
+							<li>Alexco Resource Corp.</li>
+						</ul>						
+					</div>
+					
+				</div>
+			</section>
+		</div>
+		<footer data-role="footer" data-position="fixed">
+			<ul class="myAccount">
+				<li><span>MY ACCOUNTS</span></li>
+				<li>$92,353.06 <div class=""><span>+651.06</span> (0.71%)</div></li>
+			</ul>
+		</footer><!-- /footer -->
+		
+    </div><!-- /page -->	
+	<div id="companyProfil" style="position:relative;display:none;">
+		<header data-role="header" data-position="fixed">
+			<nav id="search">
+				<a href="#home" data-transition="fade" class="profileBack"></a>
+				<a href="#" class="psearch"></a>
+				<h2 class="companyName">General Electric (GE)</h2>
+				
+			</nav>
+			<nav class="rate">
+				<div><b>714.40</b> USD
+					<span class="deviation">7.40 (1.03%)</span>
+				</div>
+				<div class="asof">As of 20.04 ET on 04/16/2015</div>
+			</nav>
+			<nav id="cnav">
+				<ul>
+					<li><a href="#" data-transition="slide" class="watchlist"></a></li>
+					<li><a href="#" class="ideabank"></a></li>
+					<li><a href="#" class="trade"></a></li>
+				</ul>
+			</nav>
+			
+		</header><!-- /header -->
+			
+			<section> 
+				<div data-role="content">
+					<div class="graph">
+						<img src="images/profile_graph.png" />
+					</div>
+					<div class="bars">
+						<div>
+							<span>Social Sentiment</span>
+							<img src="images/social_graph.png" />
+						</div>
+						<div>
+							<span>Green Index</span>
+							<img src="images/green_graph.png" />
+						</div>
+					</div>
+				</div>
+			</section><!-- /content -->
+
+
+		<footer data-role="footer" data-position="fixed">
+			<ul class="myAccount">
+				<li><span>MY ACCOUNTS</span></li>
+				<li>$92,353.06 <div class=""><span>+651.06</span> (0.71%)</div></li>
+			</ul>
+		</footer><!-- /footer -->
+		
+    </div>
+	<div id="menu-panel">
+        <p>Menu...</p>
+    </div><!-- /panel -->
+</body>
+</html>
